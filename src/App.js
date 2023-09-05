@@ -11,8 +11,8 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<Rockets />} />
-        <Route path="/missions" element={<Missions />} /> {/* Use 'element' prop instead of 'component' */}
-        <Route path="/profile" element={<Profile />} /> {/* Use 'element' prop instead of 'component' */}
+        <Route path="/missions" element={<Missions />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
   );

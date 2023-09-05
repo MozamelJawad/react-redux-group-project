@@ -21,6 +21,7 @@ const missionsSlice = createSlice({
       state.isLoading = false;
       state.error = '';
       state.missions = action.payload.map((mission) => {
+        /* eslint-disable camelcase */
         const { mission_name, mission_id, description } = mission;
         return {
           mission_name,

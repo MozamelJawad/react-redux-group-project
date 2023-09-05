@@ -12,11 +12,20 @@ function Missions() {
   }, [dispatch]);
 
   if (isLoading) {
-    return <div className="loading">Loading...</div>;
+    return (
+      <div className="loading">
+        Loading...
+      </div>
+    );
   }
 
   if (error) {
-    return <div className="error">Error: {error}</div>;
+    return (
+      <div className="error">
+        Error:
+        {error}
+      </div>
+    );
   }
 
   return (
@@ -36,10 +45,14 @@ function Missions() {
               <td className="missionName">{mission.mission_name}</td>
               <td className="missionDesc">{mission.description}</td>
               <td className="status">
-                <button type="button" className="nonactiveStyle">Not a Member</button>
+                <button type="button" className="nonactiveStyle">
+                  Not a Member
+                </button>
               </td>
               <td className="status">
-                <button type="button" className="reserveBtn">Join Mission</button>
+                <button type="button" className="reserveBtn">
+                  Join Mission
+                </button>
               </td>
             </tr>
           ))}
