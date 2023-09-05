@@ -1,0 +1,50 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+.rocketsList {
+  display: grid;
+  gap: 2rem;
+  list-style: none;
+  padding: 3% 10% 3% 3%;
+}
+
+.rocketsList li {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 4fr;
+}
+
+.rocketDetails {
+  margin-top: 5px;
+}
+
+.rocketImg {
+  width: 20vw;
+}
+
+.rocketName {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.rocketDesc {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.reserveBtn {
+  padding: 0.7rem 1rem;
+  border: none;
+  background-color: rgb(13, 141, 177);
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reserveBtn:hover {
+  background-color: rgb(8, 93, 117);
+}
