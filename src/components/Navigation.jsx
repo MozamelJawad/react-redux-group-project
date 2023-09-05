@@ -2,34 +2,50 @@ import React from 'react';
 import { NavLink } from 'react-router-dom'; // Import Link and NavLink
 import logo from '../assets/planet.png';
 
-const Navigation = () => {
-  return (
-    <header>
-      <div className="logo">
-        <img src={logo} alt="Logo" />
-        <span>Space Travelers' Hub</span>
-      </div>
-      <nav>
-        <ul>
-          <li>
-            <NavLink to="/rockets" activeClassName="active">
-              Rockets
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/missions" activeClassName="active">
-              Missions
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/profile" activeClassName="active">
-              My Profile
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
-    </header>
-  );
-}
+const Navigation = () => (
+  <header>
+    <div className="logo">
+      <img src={logo} alt="Logo" />
+      <span>Space Travelers&apos; Hub</span>
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <NavLink
+            to="/"
+            activeClassName="active"
+            style={({ isActive }) => ({
+              textDecoration: isActive ? 'underline' : 'none',
+            })}
+          >
+            Rockets
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/missions"
+            activeClassName="active"
+            style={({ isActive }) => ({
+              textDecoration: isActive ? 'underline' : 'none',
+            })}
+          >
+            Missions
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/profile"
+            activeClassName="active"
+            style={({ isActive }) => ({
+              textDecoration: isActive ? 'underline' : 'none',
+            })}
+          >
+            My Profile
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
+  </header>
+);
 
 export default Navigation;

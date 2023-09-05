@@ -8,12 +8,12 @@ import Profile from './components/Profile';
 function App() {
   return (
     <Router>
-        <Navigation />
-        <Routes>
-          <Route path="/rockets" component={Rockets} />
-          <Route path="/missions" component={Missions} />
-          <Route path="/profile" component={Profile} />
-        </Routes>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Rockets />} />
+        <Route path="/missions" component={Missions} />
+        <Route path="/profile" component={Profile} />
+      </Routes>
     </Router>
   );
 }
