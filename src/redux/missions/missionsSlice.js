@@ -1,4 +1,3 @@
-// missionsSlice.js
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
@@ -13,20 +12,18 @@ export const fetchMissions = createAsyncThunk('missions/fetchMissions', async ()
   return response.data;
 });
 
-export const joinMission = createAsyncThunk('missions/joinMission', async (missionId) => {
-  await axios.post('https://api.spacexdata.com/v3/missions');
-  return missionId;
-});
-
-export const leaveMission = createAsyncThunk('missions/leaveMission', async (missionId) => {
-  await axios.post('https://api.spacexdata.com/v3/missions');
-  return missionId;
-});
 
 const missionsSlice = createSlice({
   name: 'missions',
   initialState,
-  reducers: {},
+  reducers: {
+    joinMission: (state, action) => {
+      const {mission_id}  = action.payload;
+      const mission = state.missions.find((mission) => mission.mission_id === mission_id);
+      mission.join = !mission.join;
+    },
+  },
+
   extraReducers: (builder) => {
     builder.addCase(fetchMissions.fulfilled, (state, action) => {
       state.isLoading = false;
@@ -35,7 +32,7 @@ const missionsSlice = createSlice({
         mission_id: mission.mission_id,
         mission_name: mission.mission_name,
         description: mission.description,
-        reserved: false,
+        // reserved: false,
       }));
     });
     builder.addCase(fetchMissions.pending, (state) => {
@@ -46,27 +43,9 @@ const missionsSlice = createSlice({
       state.isLoading = false;
       state.error = action.error.message;
     });
-
-    builder.addCase(joinMission.fulfilled, (state, action) => {
-      // Find the mission by ID and mark it as reserved.
-      state.missions = state.missions.map((mission) => {
-        if (mission.mission_id === action.payload) {
-          return { ...mission, reserved: true };
-        }
-        return mission;
-      });
-    });
-
-    builder.addCase(leaveMission.fulfilled, (state, action) => {
-      // Find the mission by ID and mark it as not reserved.
-      state.missions = state.missions.map((mission) => {
-        if (mission.mission_id === action.payload) {
-          return { ...mission, reserved: false };
-        }
-        return mission;
-      });
-    });
   },
 });
+
+export const {joinMission} = missionsSlice.actions;
 
 export default missionsSlice.reducer;
