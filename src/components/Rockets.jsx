@@ -12,11 +12,18 @@ function Rockets() {
   }, [dispatch]);
 
   if (isLoading) {
-    return <div><h3>Loading ... </h3></div>
+    return <div><h3>Loading ... </h3></div>;
   }
 
   if (error) {
-    return <div><h3>Error: {error}</h3></div>
+    return (
+      <div>
+        <h3>
+          Error:
+          {error}
+        </h3>
+      </div>
+    );
   }
 
   const handleClick = (id) => {
@@ -28,7 +35,9 @@ function Rockets() {
       <ul className="rocketsList">
         {
       rockets.map((rocket) => {
-        const { id, name, description, image, reserved } = rocket;
+        const {
+          id, name, description, image, reserved,
+        } = rocket;
         return (
           <li key={id}>
             <img className="rocketImg" src={image} alt="" />
@@ -39,10 +48,9 @@ function Rockets() {
               <button
                 type="button"
                 className={`reserveBtn ${reserved ? 'booked' : 'noBooked'}`}
-
-                onClick={() => handleClick({ id })} >
-                  
-               { reserved ? 'Cancel Reservation' : 'Reserve Rockets'}
+                onClick={() => handleClick({ id })}
+              >
+                { reserved ? 'Cancel Reservation' : 'Reserve Rockets'}
               </button>
             </div>
           </li>
