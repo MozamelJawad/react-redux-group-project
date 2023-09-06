@@ -17,9 +17,9 @@ function Rockets() {
 
   if (error) {
     return (
-      <div className='error'>
-          Error:
-          { error }
+      <div className="error">
+        Error:
+        { error }
       </div>
     );
   }
@@ -33,15 +33,20 @@ function Rockets() {
       <ul className="rocketsList">
         {
       rockets.map((rocket) => {
-        const { id, name, description, image, reserved} = rocket;
+        const {
+          id, name, description, image, reserved,
+        } = rocket;
         return (
           <li key={id}>
             <img className="rocketImg" src={image} alt="" />
             <div className="rocketDetails">
               <h2 className="rocketName">{name}</h2>
               <p className="rocketDesc">
-                {reserved && <button type="button" className="reseved-btn"> Reserved</button>} &nbsp;
-                { description }</p>
+                {reserved && <button type="button" className="reseved-btn"> Reserved</button>}
+                {' '}
+&nbsp;
+                { description }
+              </p>
 
               <button
                 type="button"
