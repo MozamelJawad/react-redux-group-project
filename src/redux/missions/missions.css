@@ -71,7 +71,7 @@
   text-align: center;
 }
 
-.reserveBtn {
+.reserveBtnMission {
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -80,6 +80,6 @@
   color: #fff;
 }
 
-.reserveBtn:hover {
+.reserveBtnMission:hover {
   background-color: rgb(8, 93, 117);
 }
