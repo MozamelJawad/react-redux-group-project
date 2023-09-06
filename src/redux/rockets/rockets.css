@@ -37,14 +37,26 @@
 }
 
 .reserveBtn {
-  padding: 0.7rem 1rem;
   border: none;
-  background-color: rgb(13, 141, 177);
-  color: #fff;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.reserveBtn:hover {
+.booked {
+  color: #666;
+  padding: 0.7rem 1rem;
+  border: 1px solid rgba(128, 128, 128, 0.398);
+  background-color: transparent;
+}
+
+.noBooked {
+  background-color: rgb(13, 141, 177);
+  padding: 0.7rem 1rem;
+  border: none;
+  color: #fff;
+}
+
+.noBooked:hover {
   background-color: rgb(8, 93, 117);
 }
+
