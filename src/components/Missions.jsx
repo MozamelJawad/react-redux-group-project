@@ -50,7 +50,7 @@ function Missions() {
                 </button>
               </td>
               <td className="status">
-                <button type="button" className="reserveBtn">
+                <button type="button" className="reserveBtnMission">
                   Join Mission
                 </button>
               </td>

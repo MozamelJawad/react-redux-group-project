@@ -13,7 +13,6 @@ const Navigation = () => (
         <li>
           <NavLink
             to="/"
-            activeClassName="active"
             style={({ isActive }) => ({
               textDecoration: isActive ? 'underline' : 'none',
             })}
@@ -24,7 +23,6 @@ const Navigation = () => (
         <li>
           <NavLink
             to="/missions"
-            activeClassName="active"
             style={({ isActive }) => ({
               textDecoration: isActive ? 'underline' : 'none',
             })}
@@ -35,7 +33,6 @@ const Navigation = () => (
         <li>
           <NavLink
             to="/profile"
-            activeClassName="active"
             style={({ isActive }) => ({
               textDecoration: isActive ? 'underline' : 'none',
             })}
