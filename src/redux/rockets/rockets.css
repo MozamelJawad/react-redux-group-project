@@ -34,6 +34,7 @@
 .rocketDesc {
   font-size: 1rem;
   margin-bottom: 0.5rem;
+  line-height: 1.5;
 }
 
 .reserveBtn {
@@ -58,4 +59,25 @@
 
 .noBooked:hover {
   background-color: rgb(8, 93, 117);
+}
+
+.reseved-btn {
+  border: none;
+  padding: 0.2rem 0.6rem;
+  color: #fff;
+  background-color: rgb(13, 140, 171);
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.error,
+.loading {
+  text-align: center;
+  color: red;
+  margin-top: 3rem;
+  font-size: 1.5rem;
+}
+
+.loading {
+  color: green;
 }
