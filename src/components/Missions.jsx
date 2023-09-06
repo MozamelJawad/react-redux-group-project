@@ -1,6 +1,7 @@
+// Missions.jsx
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchMissions } from '../redux/missions/missionsSlice';
+import { fetchMissions, joinMission, leaveMission } from '../redux/missions/missionsSlice';
 import '../redux/missions/missions.css';
 
 function Missions() {
@@ -10,6 +11,14 @@ function Missions() {
   useEffect(() => {
     dispatch(fetchMissions());
   }, [dispatch]);
+
+  const handleJoinMission = (missionId) => {
+    dispatch(joinMission(missionId));
+  };
+
+  const handleLeaveMission = (missionId) => {
+    dispatch(leaveMission(missionId));
+  };
 
   if (isLoading) {
     return (
@@ -45,14 +54,26 @@ function Missions() {
               <td className="missionName">{mission.mission_name}</td>
               <td className="missionDesc">{mission.description}</td>
               <td className="status">
-                <button type="button" className="nonactiveStyle">
-                  Not a Member
-                </button>
+                {mission.reserved ? 'Active Member' : 'Not a Member'}
               </td>
               <td className="status">
-                <button type="button" className="reserveBtnMission">
-                  Join Mission
-                </button>
+                {mission.reserved ? (
+                  <button
+                    type="button"
+                    className="leaveBtnMission"
+                    onClick={() => handleLeaveMission(mission.mission_id)}
+                  >
+                    Leave Mission
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    className="joinBtnMission"
+                    onClick={() => handleJoinMission(mission.mission_id)}
+                  >
+                    Join Mission
+                  </button>
+                )}
               </td>
             </tr>
           ))}
