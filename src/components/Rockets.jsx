@@ -12,16 +12,14 @@ function Rockets() {
   }, [dispatch]);
 
   if (isLoading) {
-    return <div><h3>Loading ... </h3></div>;
+    return <div className="loading">Loading ... </div>;
   }
 
   if (error) {
     return (
-      <div>
-        <h3>
+      <div className='error'>
           Error:
-          {error}
-        </h3>
+          { error }
       </div>
     );
   }
@@ -35,15 +33,15 @@ function Rockets() {
       <ul className="rocketsList">
         {
       rockets.map((rocket) => {
-        const {
-          id, name, description, image, reserved,
-        } = rocket;
+        const { id, name, description, image, reserved} = rocket;
         return (
           <li key={id}>
             <img className="rocketImg" src={image} alt="" />
             <div className="rocketDetails">
               <h2 className="rocketName">{name}</h2>
-              <p className="rocketDesc">{description}</p>
+              <p className="rocketDesc">
+                {reserved && <button type="button" className="reseved-btn"> Reserved</button>} &nbsp;
+                { description }</p>
 
               <button
                 type="button"
