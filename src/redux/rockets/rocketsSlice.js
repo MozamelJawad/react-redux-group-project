@@ -7,8 +7,10 @@ const initialState = {
   error: '',
 };
 
+const url = 'https://api.spacexdata.com/v4/rockets';
+
 export const fetchRockets = createAsyncThunk('rockets/fetchRockets', async () => {
-  const response = await axios('https://api.spacexdata.com/v4/rockets');
+  const response = await axios(url);
   return response.data;
 });
 
