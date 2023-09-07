@@ -1,0 +1,32 @@
+.profile {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  padding: 2%;
+}
+
+.rockets,
+.mission {
+  width: 50%;
+  height: 50vh;
+}
+
+.rockets-list,
+.mission-list {
+  margin-top: 2%;
+  border: 1px solid #888;
+}
+
+.profile-list {
+  padding: 2%;
+  border-bottom: 1px solid #888;
+}
+
+.profile-list:last-child {
+  border-bottom: none;
+}
+
+.notExist {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}

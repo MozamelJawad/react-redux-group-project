@@ -14,7 +14,8 @@
 }
 
 .mission-table td,
-.mission-table th {
+.mission-table th,
+.mission-table {
   border: 1px solid #ddd;
   padding: 8px;
 }
@@ -23,6 +24,11 @@
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #efefef;
+  border: 1px solid red;
 }
 
 .status {
