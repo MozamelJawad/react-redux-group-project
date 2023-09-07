@@ -6,11 +6,27 @@ function Profile() {
   const { rockets } = useSelector((state) => state.rockets);
   const reservedRockets = rockets.filter((rocket) => rocket.reserved);
 
+  const { missions } = useSelector((state) => state.missions);
+  const joinedMission = missions.filter((mission) => mission.join);
+
   return (
     <div className="profile">
       <div className="mission">
         <h2>My Missions</h2>
-
+        { joinedMission.length > 0 ? (
+          <div className="mission-list">
+            {
+                    joinedMission.map((mission) => (
+                      <p
+                        key={mission.mission_id}
+                        className="profile-list"
+                      >
+                        {mission.mission_name}
+                      </p>
+                    ))
+                }
+          </div>
+        ) : <p className="notExist">There is no joined mission.</p>}
       </div>
 
       <div className="rockets">
