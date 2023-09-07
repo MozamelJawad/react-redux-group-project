@@ -30,8 +30,13 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
+  color: blue;
 }
 
 nav ul li a:hover {
   text-decoration: underline;
+}
+
+.navbar {
+  font-size: 1.5rem;
 }

@@ -6,7 +6,7 @@ const Navigation = () => (
   <header>
     <div className="logo">
       <img src={logo} alt="Logo" />
-      <span>Space Travelers&apos; Hub</span>
+      <span className="navbar">Space Travelers&apos; Hub</span>
     </div>
     <nav>
       <ul>

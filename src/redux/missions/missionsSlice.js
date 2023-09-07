@@ -17,7 +17,6 @@ const missionsSlice = createSlice({
   initialState,
   reducers: {
     joinMission: (state, action) => {
-      /* eslint-disable camelcase */
       const { mission_id } = action.payload;
       const mission = state.missions.find((mission) => mission.mission_id === mission_id);
       mission.join = !mission.join;
@@ -32,7 +31,6 @@ const missionsSlice = createSlice({
         mission_id: mission.mission_id,
         mission_name: mission.mission_name,
         description: mission.description,
-        // reserved: false,
       }));
     });
     builder.addCase(fetchMissions.pending, (state) => {
