@@ -10,7 +10,7 @@ function Profile() {
     <div className="profile">
       <div className="mission">
         <h2>My Missions</h2>
-      
+
       </div>
 
       <div className="rockets">

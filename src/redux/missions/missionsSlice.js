@@ -17,6 +17,7 @@ const missionsSlice = createSlice({
   initialState,
   reducers: {
     joinMission: (state, action) => {
+      /* eslint-disable camelcase */
       const { mission_id } = action.payload;
       const mission = state.missions.find((mission) => mission.mission_id === mission_id);
       mission.join = !mission.join;
