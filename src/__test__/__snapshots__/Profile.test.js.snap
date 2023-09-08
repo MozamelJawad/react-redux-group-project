@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render profile components correctly Render joined mission and reserved rockets 1`] = `
+<div>
+  <div
+    class="profile"
+  >
+    <div
+      class="mission"
+    >
+      <h2>
+        My Missions
+      </h2>
+      <p
+        class="notExist"
+      >
+        There is no joined mission.
+      </p>
+    </div>
+    <div
+      class="rockets"
+    >
+      <h2>
+        My Rockets
+      </h2>
+      <p
+        class="notExist"
+      >
+        There is no reserved rocket.
+      </p>
+    </div>
+  </div>
+</div>
+`;
