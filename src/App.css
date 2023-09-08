@@ -40,3 +40,231 @@ nav ul li a:hover {
 .navbar {
   font-size: 1.5rem;
 }
+
+
+/* Mission Style */
+
+.table-container {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 24px;
+  overflow-x: auto;
+}
+
+.mission-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.mission-table td,
+.mission-table th,
+.mission-table {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.mission-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #efefef;
+  border: 1px solid red;
+}
+
+.status {
+  width: 13%;
+  text-align: center;
+}
+
+.titles {
+  font-weight: 900;
+}
+
+.nonactiveStyle {
+  padding: 5px;
+  background-color: #777474;
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.activeStyle {
+  padding: 5px;
+  background-color: #07a6a6;
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.joinMission {
+  padding: 10px 15px;
+  font-size: 15px;
+  background: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.leaveMission {
+  padding: 10px 15px;
+  font-size: 15px;
+  background: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid red;
+  color: red;
+}
+
+.leaveBtnMission {
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.4rem 1rem;
+  background-color: #fff;
+  border: 1px solid #999;
+}
+
+.joined {
+  color: red;
+}
+
+.memberBtn {
+  text-align: center;
+  padding: 0.2rem 0.5rem;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.activeMember {
+  background-color: rgb(13, 141, 177);
+}
+
+.notMember {
+  background-color: #888;
+}
+
+/* Profile Style */
+
+.profile {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  padding: 2%;
+}
+
+.rockets,
+.mission {
+  width: 50%;
+  height: 50vh;
+}
+
+.rockets-list,
+.mission-list {
+  margin-top: 2%;
+  border: 1px solid #888;
+}
+
+.profile-list {
+  padding: 2%;
+  border-bottom: 1px solid #888;
+}
+
+.profile-list:last-child {
+  border-bottom: none;
+}
+
+.notExist {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Rockets Style */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+.rocketsList {
+  display: grid;
+  gap: 2rem;
+  list-style: none;
+  padding: 3% 10% 3% 3%;
+}
+
+.rocketsList li {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 4fr;
+}
+
+.rocketDetails {
+  margin-top: 5px;
+}
+
+.rocketImg {
+  width: 20vw;
+}
+
+.rocketName {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.rocketDesc {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.reserveBtn {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.booked {
+  color: #666;
+  padding: 0.7rem 1rem;
+  border: 1px solid rgba(128, 128, 128, 0.398);
+  background-color: transparent;
+}
+
+.noBooked {
+  background-color: rgb(13, 141, 177);
+  padding: 0.7rem 1rem;
+  border: none;
+  color: #fff;
+}
+
+.noBooked:hover {
+  background-color: rgb(8, 93, 117);
+}
+
+.reseved-btn {
+  border: none;
+  padding: 0.2rem 0.6rem;
+  color: #fff;
+  background-color: rgb(13, 140, 171);
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.error,
+.loading {
+  text-align: center;
+  color: red;
+  margin-top: 3rem;
+  font-size: 1.5rem;
+}
+
+.loading {
+  color: green;
+}

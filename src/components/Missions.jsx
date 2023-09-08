@@ -1,7 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { joinMission } from '../redux/missions/missionsSlice';
-import '../redux/missions/missions.css';
 
 function Missions() {
   const { missions, isLoading, error } = useSelector((state) => state.missions);
