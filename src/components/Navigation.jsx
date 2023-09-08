@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom'; // Import Link and NavLink
+import { NavLink } from 'react-router-dom';
 import logo from '../assets/planet.png';
 
 const Navigation = () => (

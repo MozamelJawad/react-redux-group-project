@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { render, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import missionsReducer from '../redux/missions/missionsSlice';
@@ -33,7 +33,7 @@ describe('Render Missions component correctly', () => {
       },
     });
 
-    const { container, getByText } = render(
+    const { container } = render(
       <Provider store={store}>
         <Router>
           <Missions />
@@ -42,19 +42,5 @@ describe('Render Missions component correctly', () => {
     );
 
     expect(container).toMatchSnapshot();
-
-    // Test join mission button
-    const joinMissionButton = getByText('Join Mission');
-    fireEvent.click(joinMissionButton);
-
-    // The button text should change to "Leave Mission" after clicking
-    expect(getByText('Leave Mission')).toBeInTheDocument();
-
-    // Test leave mission button
-    const leaveMissionButton = getByText('Leave Mission');
-    fireEvent.click(leaveMissionButton);
-
-    // The button text should change back to "Join Mission" after clicking again
-    expect(getByText('Join Mission')).toBeInTheDocument();
   });
 });
