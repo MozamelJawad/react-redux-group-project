@@ -90,7 +90,7 @@
 
 ### 🚀 Live Demo <a name="live-demo"></a>
 
--  [Live Demo](https://space-travelers-hub-bpgh.onrender.com/)
+- [Live Demo](https://space-travelers-hub-bpgh.onrender.com/)
 
 ### Key Features <a name="key-features"></a>
 
